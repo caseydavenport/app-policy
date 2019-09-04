@@ -260,7 +260,7 @@ bin/dikastes-arm64: ARCH=arm64
 bin/dikastes-ppc64le: ARCH=ppc64le
 bin/dikastes-s390x: ARCH=s390x
 bin/dikastes-%: local_build vendor proto $(SRC_FILES)
-	@echo" CASEY"
+	@echo "CASEY"
 	git status && mkdir -p bin
 	$(DOCKER_RUN_RO) -ti \
 	  -v $(CURDIR)/bin:/go/src/$(PACKAGE_NAME)/bin \
@@ -271,7 +271,7 @@ bin/healthz-arm64: ARCH=arm64
 bin/healthz-ppc64le: ARCH=ppc64le
 bin/healthz-s390x: ARCH=s390x
 bin/healthz-%: local_build vendor proto $(SRC_FILES)
-	@echo" CASEY"
+	@echo "CASEY"
 	git status && mkdir -p bin || true
 	-mkdir -p .go-pkg-cache $(GOMOD_CACHE) || true
 	$(DOCKER_RUN_RO) -ti \
